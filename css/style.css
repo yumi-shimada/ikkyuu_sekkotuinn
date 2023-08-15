@@ -1,0 +1,937 @@
+/*==============
+PC スマホ共通スタイル
+==============*/
+body {
+    font-family: 'NotoSansJP-Regular',Meiryo,Arial,sans-serif;
+    color: #535353;
+}
+
+@font-face {
+    font-family: 'KiwiMaru-Medium';
+    src:url('../webfonts/KiwiMaru-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NotoSansJP-Regular';
+    src: url('../webfonts/NotoSansJP-Regular.ttf') format('truetype');
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    border-style: none;
+  }
+
+.section_title::first-letter {
+    color:#fde67e;
+}
+
+h1 {
+    text-align: center;
+}
+
+#main_photo >img {
+    box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+/* 画面幅が768px以上のときPC用のスタイルを指定する */
+@media screen and (min-width: 768px) { 
+
+    /*==============
+    PC 共通スタイル
+    ==============*/
+    body {
+        padding-top:90px;
+        min-width: 1160px;
+    }
+
+    section {
+        margin:80px auto 80px auto;
+        max-width: 1024px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .section_title {
+        font-size: 48px;
+    }
+
+    /*============
+        ヘッダー 
+    ============*/
+    header {
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+        top:0;
+        left:0;
+        background-color: #FFF;
+        width: 100%;
+        box-shadow:  0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px 0 10px 0;
+    }
+
+    #header.scroll {
+        padding:10px 40px;
+    }
+
+    #logo {
+        font-family: 'KiwiMaru-Medium';
+        font-size: 48px;
+        color:#52b567;
+        margin-left: 20px;
+    }
+
+    /* ナビゲーションのレイアウト */
+    #nav_pc {
+        text-align: right;
+    }
+    /* ナビゲーションリンクの装飾 */
+    #nav_pc > a {
+        margin-left: 20px;
+        text-decoration: none;
+        padding-left: 10px;
+    }
+
+    #nav_pc > a:link {
+        color: #535353;
+    }
+
+    #nav_pc > a:visited {
+        color:#535353;
+    }
+
+    #nav_pc > a:hover {
+        color:#52b567;
+        text-decoration: underline;
+    }
+
+    #nav_pc >a:active {
+        color: #535353;
+    }
+
+    #hreftel {
+        background-color: #fde67e;
+        padding:10px 20px 10px 20px;
+        text-align: center;
+        border-radius: 30px;
+        margin: 20px;
+    }
+
+    #hreftel > a {
+        text-decoration: none;
+        color:#52b567;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* スマホ用ナビを非表示 */
+    #nav_sp,
+    #menu_sp {
+    display: none;
+    }
+
+    /* =====================
+        メインページ
+    ========================*/
+    #main_photo {
+        text-align: center;
+    }
+    #summary {
+        padding: 80px 0 80px 0;
+        background-color: #e5f4e9;
+        max-width: initial;
+        margin-top: initial;
+        display: flex;
+        justify-content: center;
+    }
+
+    #summary_left {
+        background-color: #ffffff;
+        padding: 40px 10px 40px 40px;
+        border-radius: 40px 0 0 40px;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    #summary_left > ul {
+        text-align: left;
+        width: fit-content;
+        margin: auto;
+    }
+
+    #timetable  {
+        background-color: #ffffff;
+        padding: 40px 40px 40px 10px;
+        border-radius: 0 40px 40px 0;
+        text-align: center;
+        margin-right: auto;
+    }
+
+    #timetable > table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #timetable tr th {
+        padding: 20px;
+        background-color: #52b567;
+        color:#ffffff;
+        border-right: none;
+    }
+    #timetable tr td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #535353;
+    }
+
+    #concept p {
+        size:24px;
+        text-align: center;
+    }
+
+    #sns > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+
+    .insta_btn3 {/*ボタンの下地*/
+        color: #FFF;/*文字・アイコン色*/
+        border-radius: 14px;/*角丸に*/
+        position: relative;
+        display: block;
+        height: 200px;/*高さ*/
+        width: 200px;/*幅*/
+        text-align: center;/*中身を中央寄せ*/
+        padding-top: 12px;/*上側との余白*/
+        box-sizing: border-box;
+        font-size: 19px;/*文字のサイズ*/
+        background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+        overflow: hidden;/*はみ出た部分を隠す*/
+        text-decoration:none;/*下線は消す*/
+        margin:0 auto;
+    }
+
+    .insta_btn3:before{/*グラデーション②*/
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;/*全体を覆う*/
+        height: 100%;/*全体を覆う*/
+        background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+        background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+    }
+
+    .insta_btn3 div {
+        position: relative;
+        font-size: 24px;
+    }
+
+    .insta_btn3 .fa-instagram {
+        font-size: 120px;/*アイコンサイズ*/
+        position: relative;
+        display:inline-block;
+        position: relative;
+        transition: .5s
+    }
+
+    .insta_btn3 .fa-instagram:hover {/*ホバーで一周回転*/
+    -webkit-transform: rotateX(360deg);
+    -ms-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+    }
+
+    .pc_line {
+        text-align: center;
+    }
+
+    .sp_line {
+        display:none;
+    }
+
+    #explain_access {
+        display: flex;
+        justify-content:center;
+        margin-bottom: 80px;
+    }
+
+    #explain_access > div {
+        padding:15px;
+    }
+
+    .access_detail{
+        margin-bottom: 50px;
+    }
+
+    .access_detail > div {
+        margin-bottom: 50px;
+        margin-left: 30px;
+    }
+
+    .access_detail > p {
+        margin-left: 30px;
+    }
+
+    .access_detail h2 {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .access_detail h2::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+        /* ======================
+    Q&A BegginerGuidance
+    ========================*/
+
+    .guide_indent {
+        position: relative;
+        border: 1px solid #52b567;
+        padding:20px;
+        margin:50px auto 50px auto;
+        max-width: 800px;
+    }
+    
+    .guide_indent > div {
+        display: flex;
+        align-items:center;
+    }
+
+    .guide_img_right ,.guide_img_left{
+        margin: 20px;
+    }
+
+    .arrow_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guide_number {
+        font-weight: bold;
+        font-size:24px;
+        position: absolute;
+        top: -55px;
+        background-color: #ffffff;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .guide_number span {
+        font-weight: bold;
+        font-size:36px;
+        color: #52b567;
+    }
+
+    .questionandanswer {
+        margin:30px auto 30px auto;
+    }
+
+    .question {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+        background-color: #e5f4e9;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .question::before {
+        content:'';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+    .answer {
+        padding:10px;
+    }
+
+    /* ======================
+    お問い合わせフォーム 
+    ========================*/
+    .contactdetail {
+        margin-bottom: 80px;
+    }
+
+    #sp_line {
+        display:none;
+    }
+
+    .contactdetail h2 {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .contactdetail h2::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+    .contact_address,#pc_line {
+        font-size: 18px;
+        font-family:'Kiwi Maru';
+        text-decoration: none;
+        color:#52b567;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+
+    .anounce {
+        margin-left: 50px;
+    }
+
+    /* ===========
+    LINE QRコード
+    ==============*/
+    #line_qr {
+        margin: 80px auto 80px auto;
+        text-align: center;
+    }
+
+    /* ===========
+    フッター 
+    ==============*/
+    footer {
+        background-color: #52b567;
+        padding: 30px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    footer > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-footer strong {
+        font-family: 'KiwiMaru-Medium';
+        font-size: 36px;
+        margin:0 20px 0 20px;
+    }
+
+    #logo-footer p {
+        margin-left: 20px;
+    }
+    #timetable-footer table {
+        border-radius: 20px;
+        overflow: hidden; 
+        font-size: 13px;
+    }
+
+    #timetable-footer tr th {
+        padding: 15px;
+        background-color:#ffffff;
+        background-color: #fde67e;
+        color: #52b567;
+    }
+
+    #timetable-footer tr td {
+        padding: 15px;
+        text-align: center;
+        background-color:#ffffff;
+        color:#52b567;
+    }
+
+    .opacity {/*ボタンの下地*/
+        color: #FFF;/*文字・アイコン色*/
+        position: relative;
+        text-decoration:none;/*下線は消す*/
+        margin: 10px;
+    }
+
+    .opacity div {
+        font-size: 24px;
+    }
+
+    .insta_btn {/*ボタンの下地*/
+        color: #FFF;/* 文字・アイコン色 */
+        font-size: 36px;/* 文字のサイズ */
+    } 
+}
+    
+/* 画面幅が768px以下のときスマホ用のスタイルを指定する */
+ @media screen and (max-width: 768px) { 
+
+    /*==============
+    スマホ 共通スタイル
+    ==============*/
+    p ,ul ,table,a {
+        font-size: 12px;
+    }
+
+    h2,h3 {
+        font-size: 16px;
+    }
+
+    .section_title {
+        font-size: 24px;
+    }
+
+    body {
+        min-width: 375px;
+        margin:0;
+    }
+
+    section {
+        width: 100%;
+        margin: 50px auto 50px auto;
+    }
+
+    /*============
+        ヘッダー 
+    ============*/
+    header {
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+    }
+
+    #logo {
+        font-family: 'KiwiMaru-Medium';
+        font-size: 24px;
+        color:#52b567;
+        margin: 10px;
+    }
+
+    /* PC用ナビゲーション非表示 */
+    #nav_pc {
+        display: none;
+    }
+
+    /* ハンバーガーメニュー */
+    #menu_sp {
+        position: absolute;
+        right: 0px;
+    }
+
+    /* スマホ用ナビゲーションの表示切替 */
+    /* 初期状態、レイアウトと非表示設定 */
+    #nav_sp {
+        background-color: #52b567;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 100;
+    }
+
+    /* xボタン */
+    #close {
+        position: absolute;
+        top:20px;
+        right: 20px;
+    }
+
+    /* ナビゲーションメニュー用ロゴ */
+    #logo_sp {
+        margin:50px 0 30px 20px;
+        font-family: 'KiwiMaru-Medium';
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    #nav_sp > a {
+        display: block;
+    }
+
+    #nav_sp > a:link {
+        color: #ffffff;
+    }
+
+    #nav_sp > a:visited {
+        color: #ffffff;
+    }
+
+    #nav_sp > a:hover {
+        color: #ffffff;
+        text-decoration:underline;
+    }
+
+    #nav_sp > a:active {
+        color: #ffffff;
+    }
+
+    #nav_sp > .menu {
+        text-decoration: none;
+        margin: 0 20px 0 20px;
+        height: 44px;
+        display: block;
+    }
+
+    #hreftel {
+        background-color: #fde67e;
+        padding:10px 20px 10px 20px;
+        margin: 10px;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    #hreftel > a {
+        text-decoration: none;
+        color:#52b567;
+        font-weight: bold;
+    }
+
+    /* =====================
+        メインページ
+    ========================*/
+    #summary {
+        padding: 10% 0 30px 0 ;
+        width: 100%;
+        background-color: #e5f4e9;
+        text-align: center;
+        margin:initial;
+    }
+
+    #summary_left {
+        background-color: #ffffff;
+        padding: 20px 0 20px 0;
+        border-radius: 40px 40px 0 0;
+        width: 90%;
+        margin: auto;
+    }
+
+    #summary_left > ul {
+        text-align: left;
+        width: fit-content;
+        margin: auto;
+    }
+
+    #timetable  {
+        background-color: #ffffff;
+        padding: 20px 0 20px 0;
+        border-radius: 0 0 40px 40px;
+        width: 90%;
+        margin: auto;
+    }
+
+    #timetable > table {
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    #timetable tr th {
+        background-color: #52b567;
+        color:#ffffff;
+        border-right: none;
+        padding: 8px;
+    }
+
+    #timetable tr td {
+        padding: 8px;
+        border-bottom: 1px solid #535353;
+    }
+
+    #concept p {
+        text-align: center;
+    }
+
+    #sns > div {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .insta_btn3 {/*ボタンの下地*/
+        color: #FFF;/*文字・アイコン色*/
+        border-radius: 14px;/*角丸に*/
+        position: relative;
+        display: block;
+        height: 200px;/*高さ*/
+        width: 200px;/*幅*/
+        text-align: center;/*中身を中央寄せ*/
+        padding-top: 12px;/*上側との余白*/
+        box-sizing: border-box;
+        font-size: 19px;/*文字のサイズ*/
+        background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+        background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+        overflow: hidden;/*はみ出た部分を隠す*/
+        text-decoration:none;/*下線は消す*/
+        margin:0 auto;
+    }
+
+    .insta_btn3:before{/*グラデーション②*/
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;/*全体を覆う*/
+        height: 100%;/*全体を覆う*/
+        background: -webkit-linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+        background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+    }
+
+    .insta_btn3 div {
+        position: relative;
+        font-size: 24px;
+    }
+
+    .insta_btn3 .fa-instagram {
+        font-size: 120px;/*アイコンサイズ*/
+        position: relative;
+        display:inline-block;
+        position: relative;
+        transition: .5s;
+    }
+
+    .pc_line {
+        display:none;
+    }
+
+    .sp_line {
+        margin: 20px;
+    }
+
+    #explain_access {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #explain_access >iframe {
+        width: 100%;
+    }
+
+    .access_detail{
+        margin-bottom: 50px;
+    }
+
+    .access_detail > div {
+        margin-bottom: 50px;
+        margin-left: 30px;
+    }
+
+    .access_detail > p {
+        margin-left: 30px;
+    }
+
+    .access_detail h2 {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .access_detail h2::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+        /* ======================
+    Q&A BegginerGuidance
+    ========================*/
+
+    .guide_indent {
+        position: relative;
+        border: 1px solid #52b567;
+        padding:20px;
+        margin:50px auto 50px auto;
+    }
+
+    .guide_indent > div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .guide_indent > div > p {
+        text-align: initial;
+    }
+
+    .guide_img_right,.guide_img_left {
+        margin: 20px;
+        width: 40%;
+    }
+
+    .arrow_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guide_number {
+        font-weight: bold;
+        font-size:24px;
+        position: absolute;
+        top: -55px;
+        background-color: #ffffff;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .guide_number span {
+        font-weight: bold;
+        font-size:36px;
+        color: #52b567;
+    }
+
+    .questionandanswer {
+        margin:30px auto 30px auto;
+    }
+
+    .question {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+        background-color: #e5f4e9;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .question::before {
+        content:'';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+    .answer {
+        padding:10px;
+    }
+
+    /* ======================
+    お問い合わせフォーム 
+    ========================*/
+    .contactdetail {
+        margin-bottom: 80px;
+    }
+
+    #pc_line {
+        display:none;
+    }
+
+    #sp_line >img {
+        margin-left:50px ;
+        width: 30%;
+    }
+
+    .contactdetail h2 {
+        position:relative;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        line-height: 1.7;
+    }
+
+    .contactdetail h2::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        bottom:-1px;
+        width: 5%;
+        height: inherit;
+        border-bottom: 1px solid #52b567;
+    }
+
+    .contact_address {
+        font-size: 24px;
+        font-family:'Kiwi Maru';
+        text-decoration: none;
+        color:#52b567;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+
+    .anounce {
+        margin-left: 50px;
+    }
+
+    /* ===========
+    LINE QRコード
+    ==============*/
+    #line_qr {
+        margin: 80px auto 80px auto;
+        text-align: center;
+    }
+
+    /* ===========
+    フッター 
+    ==============*/
+    footer {
+        background-color: #52b567;
+        padding: 30px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #logo-footer strong {
+        font-family: 'KiwiMaru-Medium';
+        font-size: 24px;
+        margin:0 20px 0 20px;
+    }
+
+    #timetable-footer table {
+        border-radius: 15px;
+        overflow: hidden;
+        margin: auto; 
+    }
+
+    #timetable-footer tr th {
+        padding: 8px;
+        background-color:#ffffff;
+        background-color: #fde67e;
+        color: #52b567;
+    }
+
+    #timetable-footer tr td {
+        padding: 8px;
+        text-align: center;
+        background-color:#ffffff;
+        color:#52b567;
+    }
+
+    .opacity {/*ボタンの下地*/
+        display: none;
+    }
+
+    .insta_btn {/*ボタンの下地*/
+        color: #FFF;/*文字・アイコン色*/
+        font-size: 24px; /*文字のサイズ */
+    }
+ } 
