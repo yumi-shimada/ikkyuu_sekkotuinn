@@ -83,7 +83,7 @@ h1 {
 
     #logo {
         font-family: 'KiwiMaru-Medium';
-        font-size: 48px;
+        font-size: 40px;
         color:#52b567;
         margin-left: 20px;
     }
@@ -127,7 +127,7 @@ h1 {
     #hreftel > a {
         text-decoration: none;
         color:#52b567;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
     }
 
@@ -485,7 +485,7 @@ h1 {
 }
     
 /* 画面幅が768px以下のときスマホ用のスタイルを指定する */
- @media screen and (max-width: 768px) { 
+ @media screen and (max-width: 767px) { 
 
     /*==============
     スマホ 共通スタイル
@@ -503,13 +503,14 @@ h1 {
     }
 
     body {
-        min-width: 375px;
+        min-width: 360px;
         margin:0;
     }
 
     section {
         width: 100%;
         margin: 50px auto 50px auto;
+        padding:0 10px 0 10px;
     }
 
     /*============
@@ -523,7 +524,7 @@ h1 {
 
     #logo {
         font-family: 'KiwiMaru-Medium';
-        font-size: 24px;
+        /* font-size: 24px; */
         color:#52b567;
         margin: 10px;
     }
@@ -536,7 +537,7 @@ h1 {
     /* ハンバーガーメニュー */
     #menu_sp {
         position: absolute;
-        right: 0px;
+        right: 15px;
     }
 
     /* スマホ用ナビゲーションの表示切替 */
@@ -597,7 +598,7 @@ h1 {
 
     #hreftel {
         background-color: #fde67e;
-        padding:10px 20px 10px 20px;
+        padding:5px 15px 5px 15px;
         margin: 10px;
         text-align: center;
         border-radius: 30px;
